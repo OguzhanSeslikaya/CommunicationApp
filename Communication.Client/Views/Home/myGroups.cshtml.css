@@ -1,0 +1,30 @@
+﻿.grid-container-groups {
+    display:grid;
+    grid-template-columns:1fr 2fr 1fr;
+    min-height:100vh;
+}
+
+.groups-table{
+    width: 100%;
+    margin:auto;
+}
+
+.groups-td, .groups-th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.groups-table-header{
+    background-color:#e3e3e3;
+}
+
+.group-btn{
+    outline:none;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius:4px;
+    cursor:pointer;
+}

@@ -1,0 +1,63 @@
+﻿@model GroupVM
+
+<div class="group-list-grid-container">
+        <div class="group-list-grid-container-item">
+        <table style="width:100%;">
+            <tbody>
+                <tr>
+                    <td class="groups-td"><input type="text" id="groupName" class="" placeholder="Search" name="groupName"></td>
+                    <td class="groups-td"><button class="group-btn" onclick="addGroup('/Home/createGroup',{groupName:$('#groupName').val()})">search</button></td>
+                </tr>
+
+                <tr class="groups-table-header">
+                    <th class="groups-th">Group Name</th>
+                    <th class="groups-th">Count Of Members</th>
+                    <th class="groups-th"></th>
+                </tr>
+
+                @if(Model.groups != null){
+                    @foreach (var group in Model.groups)
+                    {
+                        <tr class="groups-tr" id="@group.id">
+                            <td class="groups-td">@group.groupName</td>
+                            <td class="groups-td">@group.numberOfMembers</td>
+                            <td class="groups-td">
+                                <button class="group-btn" onclick="RequestToJoinGroup('/Home/RequestToJoinGroup',{groupId:'@group.id'})">Request To Join</button>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        </div>
+
+        @if(Model.requestsToJoin != null){
+        <div class="group-list-grid-container-item">
+            <table style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td class="groups-td"><input type="text" id="groupName" class="" placeholder="Search" name="groupName"></td>
+                        <td class="groups-td"><button class="group-btn" onclick="addGroup('/Home/createGroup',{groupName:$('#groupName').val()})">search</button></td>
+                    </tr>
+
+                    <tr class="groups-table-header">
+                        <th class="groups-th">Group Name</th>
+                        <th class="groups-th">State</th>
+                        <th class="groups-th"></th>
+                    </tr>
+
+                    @foreach (var request in Model.requestsToJoin)
+                    {
+                        <tr class="groups-tr" id="@request.id">
+                            <td class="groups-td">@request.groupName</td>
+                            <td class="groups-td">@request.state</td>
+                            <td class="groups-td">
+                                <button class="group-btn" onclick="removeRequest('/Home/removeRequest',{requestId:'@request.id'})">Remove</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        }
+</div>

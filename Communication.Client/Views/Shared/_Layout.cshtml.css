@@ -1,0 +1,70 @@
+﻿.main {
+    min-height: 100vh;
+    background-color: white;
+    color: black;
+    font-family: 'Prompt', sans-serif;
+}
+
+
+
+/*header*/
+
+.header-navbar {
+    position: absolute;
+    background-color: transparent;
+}
+
+
+.header-container {
+    height: 50px;
+    padding: 3vh 4vh;
+    font-size: 3vh;
+    font-family: 'Prompt', sans-serif;
+}
+
+    .header-container .menu-button {
+        cursor: pointer;
+        border: 0px;
+        font-size: 3vh;
+        outline: none;
+        text-decoration: none;
+        background-color: transparent;
+        padding: 2px 6px;
+        color: black;
+        border-radius: 1vh;
+        transition: 0.5s;
+    }
+
+        .header-container .menu-button:hover {
+            font-size: 3.1vh;
+            color: black;
+            box-shadow: 0px 0px 25px 6px rgb(229, 229, 229);
+        }
+
+
+.slider-menu {
+    color: black;
+    border: 2px solid black;
+    border-left: 0;
+    border-radius: 0px 15px 15px 0px;
+    width: 150px;
+    background-color: white;
+    display:none;
+}
+
+.slider-menu div {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+    transition: 1s;
+}
+
+  /*  .slider-menu div a {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+    }
+
+*/

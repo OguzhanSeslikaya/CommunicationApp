@@ -1,0 +1,9 @@
+﻿.group-settings-li {
+    border-bottom: 1px solid black;
+    transition: 1s;
+    padding-left: 2px;
+}
+
+.group-settings-li:hover{
+    border-radius:5px;
+}

@@ -1,0 +1,35 @@
+﻿@if (Context.Session.GetString("groupId") == null)
+{
+    <script>
+        location.href = "/Home/myGroups";
+    </script>
+}
+
+<nav>
+    <ul style="list-style-type: none;">
+        <li class="group-settings-li">
+            <a asp-controller="GroupSettings" asp-action="general" style="display:block;
+       padding-top:10px;
+       padding-bottom:10px;
+       cursor:pointer;text-decoration:none;color:black;">General settings</a>
+        </li>
+        <li class="group-settings-li">
+            <a asp-controller="GroupSettings" asp-action="requestsToJoin" style="display:block;
+       padding-top:10px;
+       padding-bottom:10px;
+       cursor:pointer;text-decoration:none;color:black;">Requests to join group</a>
+        </li>
+        <li class="group-settings-li">
+            <a asp-controller="GroupSettings" asp-action="member" style="display:block;
+       padding-top:10px;
+       padding-bottom:10px;
+       cursor:pointer;text-decoration:none;color:black;">member settings</a>
+        </li>
+        <li class="group-settings-li">
+            <a asp-controller="GroupSettings" asp-action="calls" asp-route-id="70556e65-2992-42d3-8cd1-9e3771b03b3f" style="display:block;
+       padding-top:10px;
+       padding-bottom:10px;
+       cursor:pointer;text-decoration:none;color:black;">call settings</a>
+        </li>
+    </ul>
+</nav>

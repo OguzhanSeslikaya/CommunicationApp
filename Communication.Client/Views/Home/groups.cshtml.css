@@ -1,0 +1,35 @@
+﻿.group-list-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height:200vh;
+    
+}
+
+.group-list-grid-container-item {
+    
+    margin: auto;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width:80%;
+}
+
+.groups-td, .groups-th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.groups-table-header {
+    background-color: #e3e3e3;
+}
+
+.group-btn {
+    outline: none;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}

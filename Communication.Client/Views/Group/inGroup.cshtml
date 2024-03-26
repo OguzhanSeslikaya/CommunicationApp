@@ -1,0 +1,108 @@
+﻿@model InGroupVM
+
+@if(Model.isAuthority){
+    @section menu{
+        <div b-vmf1zugngh>
+            <a b-vmf1zugngh style="display:block;
+            padding-top:10px;
+            padding-bottom:10px;
+            cursor:pointer;text-decoration:none;color:black;" asp-controller="GroupSettings" asp-action="general">Settings</a>
+        </div>
+    }
+}
+
+<div class="grid-container-in-group">
+    <div>
+        <div class="grid-left-item-group">
+            
+        </div>
+    </div>
+    <div>
+        <div class="create-post">
+            <div class="post-form-in-group">
+                @* <form method="post" enctype="multipart/form-data" asp-controller="Group" asp-action="CreatePost"> *@
+                <form id="createPostForm" enctype="multipart/form-data">
+                    <div><textarea name="content"></textarea></div>
+                    <div class="create-post-submit-box">
+                    <input type="file" name="file" class="create-post-input-file" />
+                    <button type="submit" class="create-post-submit-button">Share</button>
+                    </div>
+                </form>
+                @* </form> *@
+            </div>
+            <div class="hide-form-create-post"><button onclick="slideCreatePost()"><img src="~/Images/Company/CreatePost/down-arrow.svg" style="width:30px;height:30px;"></button></div>
+        </div>
+
+
+        <div>
+            @if (Model.postUsers != null)
+            {
+                @foreach (var post in Model.postUsers)
+                {
+                    <div class="group-post">
+                        <div class="group-post-content">
+                            @post.user.username
+                            <span>
+                                @post.createdDate
+                            </span>
+                            <p>@post.content</p>
+                            @if(post.fileId != null)
+                            {
+                                @post.fileName
+                                <a asp-controller="Group" asp-action="downloadPostFile" asp-route-fileId="@post.fileId" download>Download File</a>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            
+
+        </div>
+
+
+
+        
+    </div>
+    <div>
+        <div class="grid-right-item-group">
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="group-chat">
+    <div class="chat">
+        <div style="border-right:1px solid black;overflow:auto;">
+            @foreach (var item in Model.groupUsers)
+            {
+                <p class="message-box-users" onclick="changeMessages('/group/getUserMessages',{targetUserId:'@item.id',targetUserName:'@item.username'})">@item.username</p>
+            }
+        </div>
+        <div>
+            <button class="call-button" onclick="voiceCallRequest({senderId:'@Model.userId',receiverId:'',groupId:'@Context.Session.GetString("groupId")'})">Call</button>
+            <div class="message-box">
+                
+            </div>
+            <div class="message-input-box">
+                
+                <input type="text" id="message-input-box" />
+                <button onclick="sendMessage({senderId:'@Model.userId',message:$('#message-input-box').val(), groupId:'@Context.Session.GetString("groupId")'})">Send</button>
+            </div>
+        </div>
+    </div>
+    <div class="chat-button" onclick="displayChat()"><span>Chat</span></div>
+</div>
+@section Scripts{
+    <script>
+        let groupId = '@Context.Session.GetString("groupId")';
+        let myUserId = '@Model.userId';
+    </script>
+    <script src="~/lib/microsoft-signalr/signalr.js"></script>
+    <script src="~/js/Services/SignalRService.js"></script>
+    <script src="~/js/Services/Group/GroupChatService.js"></script>
+    <script src="~/js/Services/Group/GroupSweetAlertService.js"></script>
+    <script src="~/js/Services/Group/GroupSignalRService.js"></script>
+    <script src="~/lib/recorderjs/recorder.js"></script>
+}
+

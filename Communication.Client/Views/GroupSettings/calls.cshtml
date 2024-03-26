@@ -1,0 +1,28 @@
+﻿@model ICollection<CallsVM>
+
+<div class="settings-container-grid">
+    <div class="settings-left-item">
+        @await Html.PartialAsync("_settings")
+    </div>
+    <div class="settings-right-item">
+        <table class="calls-table">
+            <tbody>
+                <tr class="calls-table-header">
+                    <th class="calls-th">Audio</th>
+                    <th class="calls-th">Caller Name</th>
+                    <th class="calls-th">Called Name</th>
+                    <th class="calls-th">Date</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr class="calls-tr">
+                        <td class="calls-td"><audio src="/GroupSettings/getvoice?id=@item.callFileId" controls></audio></td>
+                        <td class="calls-td">@item.callerName</td>
+                        <td class="calls-td">@item.calledName</td>
+                        <td class="calls-td">@item.date</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

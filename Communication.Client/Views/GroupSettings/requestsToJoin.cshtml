@@ -1,0 +1,31 @@
+﻿@model ICollection<RequestsToJoinGroupVM>
+
+<div class="settings-container-grid">
+    <div class="settings-left-item">
+        @await Html.PartialAsync("_settings")
+    </div>
+    <div class="settings-right-item">
+
+        <table class="requests-table">
+            <tbody>
+                <tr class="requests-table-header">
+                    <th class="requests-th">Username</th>
+                    <th class="requests-th">Date</th>
+                    <th class="requests-th"></th>
+                    <th class="requests-th"></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr class="requests-tr">
+                        <td class="requests-td">@item.username</td>
+                        <td class="requests-td">@item.date</td>
+                        <td class="requests-td"><button class="requests-btn" onclick="acceptRequest('/groupSettings/acceptRequestToJoin',{requestId:'@item.id'})">accept</button></td>
+                        <td class="requests-td"><button class="requests-btn" onclick="acceptRequest('/groupSettings/declineRequestToJoin',{requestId:'@item.id'})">decline</button></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

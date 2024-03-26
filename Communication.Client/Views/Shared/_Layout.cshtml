@@ -1,0 +1,80 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Communication.Client</title>
+    <link rel="stylesheet" href="~/Communication.Client.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/spinner.css" asp-append-version="true" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&family=Prompt:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/lib/sweetalert2/sweetalert2.css" asp-append-version="true"/>
+</head>
+<body>
+    <header>
+        <nav class="header-navbar">
+            <div class="header-container">
+                <button class="menu-button">Menu</button>
+
+            </div>
+            <div class="slider-menu slider-menu-active">
+                <div>
+                    <a asp-controller="Home" asp-action="Index" style="
+                        display: block;
+                        padding-top:10px;
+                        padding-bottom:10px;
+                        cursor:pointer;
+                        text-decoration:none;
+                        color:black;"
+                    >Home</a>
+                </div>
+                @RenderSection("menu", required : false)
+                <div style="border-bottom:0;">
+                    <a asp-area="Identity" asp-controller="Account" asp-action="logout" style="
+                        display: block;
+                        padding-top:10px;
+                        padding-bottom:10px;
+                        cursor:pointer;
+                        text-decoration:none;
+                        color:black;"
+                    >Logout</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="main" role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        @await Html.PartialAsync("_FooterPartial")
+    </footer>
+
+
+
+    <div id="overlay">
+        <div class="cv-spinner">
+            <span class="spinner"></span>
+            <span class="upload-percentage"></span>
+        </div>
+        <div>
+            
+        </div>
+    </div>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/sweetalert2/sweetalert2.js"></script>
+    <script src="~/js/Services/HomeService.js"></script>
+    <script src="~/js/Services/AjaxService.js"></script>
+    <script src="~/js/Services/Group/GroupService.js"></script>
+    <script src="~/js/Services/Group/GroupSettingsService.js"></script>
+    <script src="~/js/Services/SweetAlertService.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<div class="login-grid-container">
+    <div></div>
+    <div class="login-form">
+        <h1>Login Form</h1>
+        <form method="post" asp-area="Identity" asp-controller="Account" asp-action="login">
+            <div class="login-form-input-box">
+                <label>Username</label> <input name="username">
+            </div>
+            <div class="login-form-input-box">
+                <label>Password</label> <input name="password" type="password">
+            </div>
+            <p>if you don't have account <a asp-area="Identity" asp-controller="Account" asp-action="register">register</a> </p>
+            <div class="login-form-button-box">
+            <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <div></div>
+</div>

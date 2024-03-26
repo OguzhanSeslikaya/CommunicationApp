@@ -1,0 +1,24 @@
+﻿@model ICollection<MemberSettingsVM>
+
+<div class="settings-container-grid">
+    <div class="settings-left-item">
+        @await Html.PartialAsync("_settings")
+    </div>
+    <div class="settings-right-item">
+        <table class="members-table">
+            <tbody>
+                <tr class="members-table-header">
+                    <th class="members-th">Username</th>
+                    <th class="members-th"></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr class="members-tr">
+                        <td class="members-td">@item.username</td>
+                        <td class="members-td"><button class="members-btn" onclick="kickMember('/groupSettings/kickMember',{userId:'@item.userId'})">Kick</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

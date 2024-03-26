@@ -1,0 +1,8 @@
+﻿@if (ViewData["validation"] != null)
+{
+    <script src="~/lib/sweetalert2/sweetalert2.js"></script>
+    <script src="~/js/Services/SweetAlertService.js"></script>
+    <script>
+        validationAlert('@ViewData["validation"]');
+    </script>
+}

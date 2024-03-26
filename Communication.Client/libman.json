@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "AlertifyJS@1.13.1",
+      "destination": "wwwroot/js/AlertifyJS/"
+    },
+    {
+      "library": "sweetalert2@11.7.32",
+      "destination": "wwwroot/lib/sweetalert2/"
+    },
+    {
+      "library": "jquery@3.7.1",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "jszip@3.10.1",
+      "destination": "wwwroot/lib/jszip/"
+    },
+    {
+      "library": "signalr.js@2.4.3",
+      "destination": "wwwroot/lib/signalr.js/"
+    },
+    {
+      "library": "microsoft-signalr@7.0.12",
+      "destination": "wwwroot/lib/microsoft-signalr/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "opus-recorder@8.0.5",
+      "destination": "wwwroot/lib/opus-recorder/"
+    }
+  ,
+{
+  "provider": "cdnjs",
+  "library": "recorderjs@0.1.0",
+  "destination": "wwwroot/lib/recorderjs/"
+}
+]
+}

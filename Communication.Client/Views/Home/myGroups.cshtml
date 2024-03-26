@@ -1,0 +1,40 @@
+﻿@model ICollection<Communication.Entity.ViewModels.Groups.MyGroupVM>
+
+<div class="grid-container-groups">
+    <div></div>
+    <div style="margin:auto;width:100%;">
+    <table class="groups-table">
+        <tbody>
+            <tr>
+                
+                <td class="groups-td"><input type="text" id="groupName" class="" placeholder="Group Name" name="groupName"></td>
+                <td class="groups-td"><button class="group-btn" onclick="addGroup('/Home/createGroup',{groupName:$('#groupName').val()})">create</button></td>
+               
+            </tr>
+
+        <tr class="groups-table-header">
+            <th class="groups-th">Group Name</th>
+            <th class="groups-th">Count Of Members</th>
+            <th class="groups-th">Your Role</th>
+            <th class="groups-th"></th>
+            <th class="groups-th"></th>
+    </tr>
+            @foreach (var group in Model)
+            {
+                <tr class="groups-tr" id="@group.id">
+                    <td class="groups-td">@group.groupName</td>
+                    <td class="groups-td">@group.groupMemberCount</td>
+                    <td class="groups-td">@group.myRole</td>
+                        <td class="groups-td"><button class="group-btn" onclick="goGroup('/Group/goGroup',{id:'@group.id'})">Go</button></td>
+                    <td class="groups-td">
+                        <button class="group-btn" onclick="leaveGroup('/Home/leaveGroup',{id:'@group.id',groupName:'@group.groupName',myRole:'@group.myRole'},'@group.id')">Leave</button>
+                    </td>
+                </tr>
+            } 
+            </tbody>
+</table>
+
+    </div>
+<div></div>
+
+</div>
