@@ -12,13 +12,13 @@
 
 <h2>Kullanılan Teknolojiler</h2>
 <ul>
-  <li>d</li>
-  <li>d</li>
-  <li>d</li>
-  <li>d</li>
+  <li>Entity Framework Core</li>
+  <li>Asp.net Core Identity</li>
+  <li>PostgreSQL</li>
+  <li>SignalR</li>
+  <li>FluentValidation</li>
+  <li>NAudio</li>
 </ul>
-<p>Veritabanı: PostgreSQL veritabanı kullanılmaktadır.</p>
-<p>SignalR: Canlı sohbet için SignalR kullanılmaktadır.</p>
 
 <h2>Daha Fazla Bilgi</h2>
 <p>Uygulama hakkında daha detaylı bilgi edinmek için, kodları inceleyebilir veya profilimdeki iletişim seçeneklerinden bana ulaşarak sorularınızı sorabilirsiniz.</p>
