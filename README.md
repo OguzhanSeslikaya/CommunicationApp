@@ -1,9 +1,6 @@
 <h1>CommunicationApp</h1>
 <p>CommunicationApp, kullanıcıların gruplar oluşturarak sohbet etmelerini veya gönderi paylaşmalarını sağlayan bir uygulamadır. Proje, çok katmanlı mimari ve MVC üzerine kurulmuştur.</p>
 
-<h2>Amaç</h2>
-<p>Bu uygulama, kullanıcıların gruplar oluşturarak iletişim kurmalarını ve içerik paylaşmalarını amaçlar. Canlı sohbet imkanı sunarak etkileşimi artırır.</p>
-
 <h2>Özellikler</h2>
 <p>Grup Oluşturma ve Katılma: Uygulamaya giriş yaptıktan sonra, mevcut gruplara katılabilir veya yeni gruplar oluşturabilirsiniz.</p>
 
@@ -16,5 +13,6 @@
 <h2>Kullanılan Teknolojiler</h2>
 <p>Veritabanı: PostgreSQL veritabanı kullanılmaktadır.</p>
 <p>SignalR: Canlı sohbet için SignalR kullanılmaktadır.</p>
+
 <h2>Daha Fazla Bilgi</h2>
-<p>Uygulama hakkında daha detaylı bilgi edinmek için, kodları inceleyebilir veya bize iletişim seçeneklerinden ulaşarak sorularınızı sorabilirsiniz.</p>
+<p>Uygulama hakkında daha detaylı bilgi edinmek için, kodları inceleyebilir veya profilimdeki iletişim seçeneklerinden bana ulaşarak sorularınızı sorabilirsiniz.</p>
