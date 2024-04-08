@@ -10,10 +10,10 @@
 
 <p>Grup Yönetimi: Grup admini iseniz, grup ayarlarına erişebilir, grup üyelerini yönetebilir ve gerçekleşen sesli sohbetleri dinleyebilirsiniz.</p>
 
-<h2>Kullanılan Teknolojiler</h2>
+  <h2>Kullanılan Teknolojiler</h2>
 <ul>
   <li>Entity Framework Core</li>
-  <li>Asp.net Core Identity</li>
+  <li>Asp.Net Core Identity</li>
   <li>PostgreSQL</li>
   <li>SignalR</li>
   <li>FluentValidation</li>
