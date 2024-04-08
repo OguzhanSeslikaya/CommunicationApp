@@ -10,7 +10,8 @@
 
 <p>Grup Yönetimi: Grup admini iseniz, grup ayarlarına erişebilir, grup üyelerini yönetebilir ve gerçekleşen sesli sohbetleri dinleyebilirsiniz.</p>
 
-  <h2>Kullanılan Teknolojiler</h2>
+<h2>Kullanılan Teknolojiler</h2>
+<h3>API</h3>
 <ul>
   <li>Entity Framework Core</li>
   <li>Asp.Net Core Identity</li>
@@ -18,6 +19,14 @@
   <li>SignalR</li>
   <li>FluentValidation</li>
   <li>NAudio</li>
+</ul>
+<h3>Client</h3>
+<ul>
+  <li>Jquery</li>
+  <li>Sweet Alert</li>
+  <li>Microsoft Signalr</li>
+  <li>Sweet Alert</li>
+  <li>Recorder JS</li>
 </ul>
 
 <h2>Daha Fazla Bilgi</h2>
