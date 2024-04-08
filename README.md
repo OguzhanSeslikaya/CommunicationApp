@@ -11,6 +11,12 @@
 <p>Grup Yönetimi: Grup admini iseniz, grup ayarlarına erişebilir, grup üyelerini yönetebilir ve gerçekleşen sesli sohbetleri dinleyebilirsiniz.</p>
 
 <h2>Kullanılan Teknolojiler</h2>
+<ul>
+  <li>d</li>
+  <li>d</li>
+  <li>d</li>
+  <li>d</li>
+</ul>
 <p>Veritabanı: PostgreSQL veritabanı kullanılmaktadır.</p>
 <p>SignalR: Canlı sohbet için SignalR kullanılmaktadır.</p>
 
